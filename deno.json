@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/denoland/deno/refs/tags/v2.0.0/cli/schemas/config-file.v1.json",
+  "tasks": {
+    "generate": "tsoa spec-and-routes",
+    "dev": "deno run --unstable-sloppy-imports --allow-read --allow-env --allow-net --watch src/main.ts"
+  },
+  "imports": {
+    "@tsoa/runtime": "npm:@tsoa/runtime@^6.5.1",
+    "@types/express": "npm:@types/express@^4.17.13",
+    "express": "npm:express@^4.21.1",
+    "tsoa": "npm:tsoa@^6.5.1"
+  },
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "strict": true
+  },
+  "lint": {
+    "exclude": ["src/__autogen/**/*"]
+  }
+}
